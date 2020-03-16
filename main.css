@@ -65,7 +65,8 @@ img {
     margin-left: 3.5em;
     margin-bottom: 0.5em;
     max-width: 1200px;
-    min-width:1200px;
+    width: 100%;
+    height: auto;
 }
 
 table{
@@ -73,9 +74,9 @@ table{
     margin-left: 2.5em;
 }
 
-a         { color: #00a; text-decoration: none;}
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
+a         { color: #fff; text-decoration: none;}
+a:hover   { color: #bbb; }
+a:visited { color: #cccccc; }
 h1:hover { color: #cccccc;}
 h3:hover { color: #cccccc;}
 blockquote {
