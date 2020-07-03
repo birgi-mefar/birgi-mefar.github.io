@@ -67,6 +67,7 @@ img {
     max-width: 1200px;
     width: 100%;
     height: auto;
+    padding: 10px;
 }
 
 table{
