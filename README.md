@@ -10,3 +10,4 @@
 
 # Skype ile nasıl bağlantı kurabilirim ?
 
+# Wellcome uygulamasına nasıl erişebilirim ? 

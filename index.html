@@ -4,6 +4,34 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./main.css" />
+        <style>
+            .accordion {
+              color: #444;
+              cursor: pointer;
+              padding: 18px;
+              width: 100%;
+              border: none;
+              text-align: left;
+              outline: none;
+              font-size: 15px;
+              transition: 0.4s;
+            }
+            
+            .active, .accordion:hover {
+              background-color: #ccc;
+            }
+            
+            .panel {
+              padding: 0 18px;
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.2s ease-out;
+            }
+
+            button{
+                background: black;
+            }
+        </style>
     </head>
     <body>
         <div class="wrapper flex flex-col relative min-h-screen">
@@ -14,11 +42,12 @@
                     </section>
 
                     <section class="column centre flex-1">
-                        <a href="#">
-                            <h3 class="head" href="#">
-                                <i class="fa fa-home" ></i>
-                                 Şirketteki bilgisayarıma evden nasıl ulaşabilrim  ?</h3>
-                        </a>
+                        <button class="accordion">
+                                <h3 class="head">
+                                    <i class="fa fa-home" ></i>
+                                    Şirketteki bilgisayarıma evden nasıl ulaşabilrim  ?</h3>
+                        </button>
+                        <div class="panel">
                         <p> 
                             Şirketteki çalıştığınız bilgisayarın açık olduğundan emin olun. 
                         </p>
@@ -43,26 +72,33 @@
                             </table>
                         </p>
                         <img src="https://i.imgur.com/8Oewj4n.png" style="width: 40% !important"/>
+                        </div>
                     </section>
 
                     <section class="column centre flex-1">
-                        <a href="#">
-                            <h3 class="head" href="#">
+                        <button class="accordion">
+                            <h3 class="head">
                                 <i class="fa fa-envelope" ></i>
                                  Şirket Mail adresime nasıl girebilirim  ?</h3>
-                        </a>
-                        <p> Outlook Web App üzerinden maillerinize erişmek için 
-                            <a href="https://owa.birgi.com/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fowa.birgi.com%2fowa%2f" 
-                            style="text-decoration: underline;">tıklayınız</a>.
-                        </p>
+                        </button>
+                        <div class="panel">
+                            <p> Outlook Web App üzerinden maillerinize erişmek için 
+                                <a href="https://owa.birgi.com/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fowa.birgi.com%2fowa%2f" 
+                                style="text-decoration: underline;">tıklayınız</a>.
+                            </p>
+                        </div>
                     </section>
 
                     <section class="column centre flex-1">
-                        <a href="#">
-                            <h3 class="head" href="#">
-                                <i class="fa fa-wifi" ></i> 
-                                VPN programını nasıl indirebilirim ve ayarlarını yapabilirim?</h3>
-                        </a>
+                        <button class="accordion">
+                            <a>
+                                <h3 class="head">
+                                    <i class="fa fa-wifi" ></i> 
+                                    VPN programını nasıl indirebilirim ve ayarlarını yapabilirim?</h3>
+                            </a>
+                        </button>
+                        
+                        <div class="panel">
                         <p>FortiClient'ı bilgisayarınıza indirmek için 
                             <a href="https://1drv.ms/u/s!AnCKYsKHpTn2mxcHkDgVDGL4hOl2?e=wEUWIk" style="text-decoration: underline;">tıklayınız</a>.
                         </p>
@@ -127,81 +163,117 @@
                             <img src="https://imgur.com/IvMXK4S.gif"/>
                             <img src="https://imgur.com/llZ7QGr.gif"/>
                             <img src="https://imgur.com/f0buGBu.gif"/>
+                        </div>
                     </section>
                     
                     <section class="column centre flex-1">
-                        <h3 class="head" href="#">
-                            <i class="fa fa-user-circle" ></i> 
-                             QDMS'e nasıl bağlanabilirim ?</h3>
-                        <p>QDMS'i bilgisayarınıza indirmek için  
-                            <a href="https://1drv.ms/u/s!AnCKYsKHpTn2mxWUjzY5gmb3P7Zh?e=lMe8pT" style="text-decoration: underline;">tıklayınız</a>.
-                        </p>
+                        <button class="accordion">
+                            <h3 class="head" href="#">
+                                <i class="fa fa-user-circle" ></i> 
+                                QDMS'e nasıl bağlanabilirim ?</h3>
+                        </button>    
+                        <div class="panel">
+                            <p>QDMS'i bilgisayarınıza indirmek için  
+                                <a href="https://1drv.ms/u/s!AnCKYsKHpTn2mxWUjzY5gmb3P7Zh?e=lMe8pT" style="text-decoration: underline;">tıklayınız</a>.
+                            </p>
+                        </div>
                     </section>
 
                     <section class="column centre flex-1">
+                        <button class="accordion">
                         <a href="#">
                             <h3>
                             <i class="fa fa-cube" ></i> 
                                  Core+'a nasıl bağlanabilirim ?
                                 </h3>
                         </a>
+                        </button>
+                        
+                        <div class="panel">
                         <p>1. Öncelikle, VPN'e bağlı olduğunuza emin olun. </p>
                         <p>2. Core+'a şahsi bilgisayarınıza indiremek için 
                             <a href="https://1drv.ms/u/s!AnCKYsKHpTn2mxR_kFHcy7XSs_Gg?e=I1FNTo" style="text-decoration: underline;">tıklayınız</a>.
                         </p>
+                        <p>3. Core+ yetkileri sadece IT Müdürü tarafından verilmektedir.</p>
+                        </div>
                     </section>
 
                     <section class="column centre flex-1">
-                        <a href="#">
-                            <h3>
-                                <i class="fa fa-skype" ></i> 
-                                 Skype'ı bilgisayarıma nasıl kurabilirim ?</h3>
-                        </a>
-                        <p> 
-                            1.	Skype kullanımı için bilgisayarınızın internete bağlı olmanız ve bir Microsoft accountunuzun olması gerekiyor.
-                        </p>
-                        <p>
-                            2.	https://web.skype.com/  adresine Google chrome veya internete explorer adres barına yazarak veya linke tıklayarak erişilmeli.
-                        </p>
-                        <p>
-                            3.	Skype web sayfasında  ekranın sol üst köşesinde bulunan sign in ‘e tıklayarak gelen menüde “use skype online” tıklayarak giriş ekranına ulaşılır.
-                        </p>  
-                        <p> 
-                            4.	Microsoft hesabınız varsa gelen giriş ekranında email veya telefon numarası ve şifre girilerek skype girişi yapılır. Eğer bir hesabınız yoksa login ekranında “Create one” tıklayarak yeni bir hesap oluşturulur. 
-                        </p>
-                        <br/>
-                        <img src="https://i.imgur.com/LW5lcaI.png"/>
-                        <img src="https://i.imgur.com/ooqObPg.png"/>
-                        <img src="https://i.imgur.com/kJ9AG0S.png"/>
-                        <img src="https://i.imgur.com/IkykDeO.png"/>
-                        <img src="https://i.imgur.com/mS0aN7O.png"/>
-                        <img src="https://i.imgur.com/afupv5C.png"/>
+                        <button class="accordion">
+                            <a href="#">
+                                <h3>
+                                    <i class="fa fa-skype" ></i> 
+                                    Skype'ı bilgisayarıma nasıl kurabilirim ?</h3>
+                            </a>
+                        </button>
+
+                        <div class="panel">
+                            <p> 
+                                1.	Skype kullanımı için bilgisayarınızın internete bağlı olmanız ve bir Microsoft accountunuzun olması gerekiyor.
+                            </p>
+                            <p>
+                                2.	https://web.skype.com/  adresine Google chrome veya internete explorer adres barına yazarak veya linke tıklayarak erişilmeli.
+                            </p>
+                            <p>
+                                3.	Skype web sayfasında  ekranın sol üst köşesinde bulunan sign in ‘e tıklayarak gelen menüde “use skype online” tıklayarak giriş ekranına ulaşılır.
+                            </p>  
+                            <p> 
+                                4.	Microsoft hesabınız varsa gelen giriş ekranında email veya telefon numarası ve şifre girilerek skype girişi yapılır. Eğer bir hesabınız yoksa login ekranında “Create one” tıklayarak yeni bir hesap oluşturulur. 
+                            </p>
+                            <br/>
+                            <img src="https://i.imgur.com/LW5lcaI.png"/>
+                            <img src="https://i.imgur.com/ooqObPg.png"/>
+                            <img src="https://i.imgur.com/kJ9AG0S.png"/>
+                            <img src="https://i.imgur.com/IkykDeO.png"/>
+                            <img src="https://i.imgur.com/mS0aN7O.png"/>
+                            <img src="https://i.imgur.com/afupv5C.png"/>
+                        </div>
                     </section>
-                       <section class="column centre flex-1">
-                        <a href="#">
+
+                    <section class="column centre flex-1">
+                        
+                        <button class="accordion">
                             <h3 class="head" href="#">
-                                <i class="fa fa-home" ></i>
-                                 Wellcome uygulamasını nasıl ulaşabilrim  ?</h3>
-                        </a>
-                        <p> 1.  Android
-                            <a href="https://play.google.com/store/apps/details?id=com.danteteknoloji.wellcome" 
-                            style="text-decoration: underline;"> tıklayınız</a>.
-                        </p>
-                        <p> 
-                            2.  Apple (IOS)
-                            <a href="https://apps.apple.com/us/app/wellcome/id1438273228?l=tr&ls=1" 
-                            style="text-decoration: underline;"> tıklayınız</a>.
-                        </p>
-                           
-                        <p> 
-                            3.  Uygulamayı yüklendikten sonra, giriş bilgileriniz için
-                            telefonunuzun mesajlar bölümüne giderek SMS ile yönlendirme yaptığımız 
-                            Wellcome giriş bilgilerini telefonunuzdan bulabilirsiniz. 
-                        </p>
+                                <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+                                 Wellcome uygulamasına nasıl ulaşabilrim  ?</h3>
+                        </button>
+                        <div class="panel">
+                            <p> 1.  Android
+                                <a href="https://play.google.com/store/apps/details?id=com.danteteknoloji.wellcome" 
+                                style="text-decoration: underline;"> tıklayınız</a>.
+                            </p>
+                            <p> 
+                                2.  Apple (IOS)
+                                <a href="https://apps.apple.com/us/app/wellcome/id1438273228?l=tr&ls=1" 
+                                style="text-decoration: underline;"> tıklayınız</a>.
+                            </p>
+                            
+                            <p> 
+                                3.  Uygulamayı yüklendikten sonra, giriş bilgileriniz için
+                                telefonunuzun mesajlar bölümüne giderek SMS ile yönlendirme yaptığımız 
+                                Wellcome giriş bilgilerini telefonunuzdan bulabilirsiniz. 
+                            </p>
+                        </div>
                     </section>
-    
+
                 </container>
             </main>
         </div>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                  panel.style.maxHeight = null;
+                } else {
+                  panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+              });
+            }
+            </script>
     </body>
 </html>

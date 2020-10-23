@@ -76,10 +76,6 @@ table{
 }
 
 a         { color: #fff; text-decoration: none;}
-a:hover   { color: #bbb; }
-a:visited { color: #cccccc; }
-h1:hover { color: #cccccc;}
-h3:hover { color: #cccccc;}
 blockquote {
   padding: 0.1em 1.3em;
   background: #fafafa;
